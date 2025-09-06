@@ -97,7 +97,12 @@ int main(){
                 int rep;
                 cin>>rep;
                 cin.ignore(1000, '\n');
-                if(rep==0||rep>restaurants.size()){
+                if(restaurants.empty()==true){
+                  cout<<"There are no restaurants."<<endl;
+                  break;
+                  
+                }
+                else if(rep==0||rep>restaurants.size()){
                     cout<<"please enter a number inside of the range listed "<<endl;
                 }
                 else{
