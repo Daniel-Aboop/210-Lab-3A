@@ -93,16 +93,17 @@ int main(){
         }
         else if(response=="L"||response=="l"){
             while(true){
-                cout<<"There are "<< restaurants.size()<<" restaurants, which one would you like to print? Enter number"<<endl;
-                int rep;
-                cin>>rep;
-                cin.ignore(1000, '\n');
                 if(restaurants.empty()==true){
                   cout<<"There are no restaurants."<<endl;
                   break;
                   
                 }
-                else if(rep==0||rep>restaurants.size()){
+                cout<<"There are "<< restaurants.size()<<" restaurants, which one would you like to print? Enter number"<<endl;
+                int rep;
+                cin>>rep;
+                cin.ignore(1000, '\n');
+                
+                if(rep==0||rep>restaurants.size()){
                     cout<<"please enter a number inside of the range listed "<<endl;
                 }
                 else{
